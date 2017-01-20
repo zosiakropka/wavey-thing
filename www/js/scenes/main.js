@@ -1,6 +1,12 @@
-define(['game'], function(Q) {
-  Q.scene('main', function(stage){
-    var player = stage.insert(new Q.Player());
-    stage.add("viewport").follow(player);
+define([
+    'game',
+    'sprites/player'
+  ], function(
+    Q,
+    Player
+  ) {
+    Q.scene('main', function(stage){
+      var player = stage.insert(new Player());
+      stage.add("viewport").follow(player);
+    });
   });
-});
