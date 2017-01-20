@@ -1,0 +1,22 @@
+{
+  "name": "fast-n-cast",
+  "description": "Fast & Cast",
+  "main": "index.js",
+  "authors": [
+    "Pinkgreen Black"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/zosiakropka/wavey-thing",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "requirejs-promise": "^1.2.0"
+  }
+}
