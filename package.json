@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/zosiakropka/wavey-thing/issues"
   },
-  "homepage": "https://github.com/zosiakropka/wavey-thing#readme"
+  "homepage": "https://github.com/zosiakropka/wavey-thing#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "serve-static": "^1.11.1"
+  }
 }
