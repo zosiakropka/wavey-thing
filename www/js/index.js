@@ -1,4 +1,4 @@
-requirejs(['sprites/player'], function() {
+requirejs(['scenes/main', 'sprites/player'], function() {
   var app = {
     // Application Constructor
     initialize: function() {
@@ -28,5 +28,4 @@ requirejs(['sprites/player'], function() {
 
   app.initialize();
 
-  setTimeout(app.onDeviceReady.bind(app), 500);
 });

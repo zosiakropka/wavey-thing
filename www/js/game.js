@@ -5,5 +5,13 @@ define(['quintus-all'], function(){
     .controls()                        // Add in default controls (keyboard, buttons)
     .touch();                          // Add in touch support (for the UI)
 
+    Q.load("peace.jpg",
+    function() {
+      console.log('loaded some assets!');
+      Q.sheet("peace","peace.jpg", { tilew: 32, tileh: 32 });
+      // Q.compileSheets("sprites.png","sprites.json");
+      Q.stageScene("main");
+    });
+
   return Q;
 })

@@ -5,9 +5,9 @@ define(['game'], function(Q){
 
       // You can call the parent's constructor with this._super(..)
       this._super(p, {
-        sheet: "player",  // Setting a sprite sheet sets sprite width and height
-        x: 410,           // You can also set additional properties that can
-        y: 90            // be overridden on object creation
+        sheet: "peace",  // Setting a sprite sheet sets sprite width and height
+        x: 10,           // You can also set additional properties that can
+        y: 10            // be overridden on object creation
       });
 
       // Add in pre-made components to get up and running quickly
