@@ -1,7 +1,10 @@
 define([
-    'require-promise!game'
+    'require-promise!game',
+    'game-objects/wave-spawner',
+    'scenes/gameover'
   ], function(
-    Q
+    Q,
+    WaveSpawner
   ){
     Q.Sprite.extend('Obstacle', {
       init: function(p) {
@@ -24,15 +27,25 @@ define([
       step: function(dt) {
         this.p.age += dt;
 
-        if(this.p.x < -100) { this.destroy(); }
+        if (this.p.x < -100) { this.destroy(); }
       },
 
       hit: function() {
         this.p.type = 0;
-        // this.p.collisionMask = Q.SPRITE_NONE;
-        this.p.vx = 0;
-        this.p.vy = 0;
-        this.p.opacity = 0.5;
+        this.p.collisionMask = Q.SPRITE_NONE;
+
+        if (!Q.stage(1)) {
+          this.stage.insert(new WaveSpawner({x: this.p.x}));
+          Q.stageScene('gameover', 1);
+        }
+      },
+
+      spawnDeathWave: function() {
+        this.stage.insert(new Q.Wave({
+          xBase: this.p.x - 700,
+          age: Math.random() * 2,
+          maxAge: 6
+        }));
       }
     });
 
