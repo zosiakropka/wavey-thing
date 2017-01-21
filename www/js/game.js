@@ -7,13 +7,14 @@ define([
   ) {
     var deferred = $.Deferred()
     var Q = Quintus()
-      .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
+      .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI, Audio")
       .setup({
         width: 1920,
         height: 1080,
         scaleToFit: true
       })
-      .touch();
+      .touch()
+      .enableSound();
 
     Q.load([
         'nekromanta.png',
@@ -23,7 +24,8 @@ define([
         'background-floor.png',
         'background-wall.png',
         'play-again.png',
-        'logo/pmmestudio.jpg'
+        'logo/pmmestudio.jpg',
+        'pmme_magic_metal.mp3'
       ],
       function() {
         console.log('loaded some assets!');
@@ -41,6 +43,8 @@ define([
         });
 
         deferred.resolve(Q);
+
+        Q.audio.play('pmme_magic_metal.mp3', {loop: true});
       });
 
     return deferred.promise();
