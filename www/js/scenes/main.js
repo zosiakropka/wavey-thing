@@ -4,14 +4,16 @@ define([
     'sprites/wave',
     'game-objects/obstacle-spawner',
     'spells',
-    'underscore'
+    'underscore',
+    'mediator'
   ], function(
     Q,
     Player,
     Wave,
     ObstacleSpawner,
     Spells,
-    _
+    _,
+    mediator
   ) {
     var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
@@ -57,5 +59,9 @@ define([
 
     function _insertSpellButtons() {
       Spells.renderSpellButtons();
+
+      mediator.subscribe('spell:cast', function() {
+        Spells.renderSpellButtons();
+      });
     }
   });
