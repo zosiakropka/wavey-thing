@@ -16,9 +16,11 @@ define([
 
         this.add('2d');
 
-        mediator.on('spell:cast', function() {
+        mediator.on('spell:cast', function(spell) {
           var obstacle = _getFirstObstacle();
-          if (!obstacle) { return; }
+          if (!obstacle || !obstacle.isSusceptibile(spell)) {
+            return;
+          }
 
           obstacle.destroy();
         })

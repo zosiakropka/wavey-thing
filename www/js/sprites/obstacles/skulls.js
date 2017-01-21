@@ -8,7 +8,10 @@ define([
     Obstacle.extend('Skulls', {
       init: function() {
         this._super({
-          sheet: 'skulls'
+          sheet: 'skulls',
+          susceptibilities: [
+            'feist'
+          ]
         });
       }
     });

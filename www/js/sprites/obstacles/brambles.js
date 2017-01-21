@@ -8,7 +8,10 @@ define([
     Obstacle.extend('Brambles', {
       init: function() {
         this._super({
-          sheet: 'brambles'
+          sheet: 'brambles',
+          susceptibilities: [
+            'fire'
+          ]
         });
       }
     });

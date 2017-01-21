@@ -16,6 +16,11 @@ define([
         this.on("hit");
       },
 
+      isSusceptibile: function(spell) {
+        return _(this.p.susceptibilities)
+          .contains(spell);
+      },
+
       step: function(dt) {
         this.p.age += dt;
 
