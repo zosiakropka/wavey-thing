@@ -13,7 +13,7 @@ define([
     Spells,
     $
   ) {
-    var SCREEN_HEIGHT = $(window).height();
+    var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
     var FLOOR_Y = SCREEN_HEIGHT * 0.8;
 
@@ -52,7 +52,7 @@ define([
         .add('viewport')
         .follow(player);
 
-      stage.viewport.offsetY = SCREEN_MIDDLE_Y - SCREEN_HEIGHT + FLOOR_Y;
+      stage.viewport.offsetY = SCREEN_MIDDLE_Y - SCREEN_HEIGHT + FLOOR_Y - (player.p.h / 2);
     }
 
     function _insertSpellButtonsOnStage(stage) {
