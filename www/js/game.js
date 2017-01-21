@@ -26,8 +26,8 @@ define([
       function() {
         console.log('loaded some assets!');
         Q.sheet('nekromanta', 'nekromanta.png', {
-          tilew: 317,
-          tileh: 355
+          tilew: 309,
+          tileh: 354
         });
         Q.sheet('brambles', 'przeszkoda_kolce1.png', {
           tilew: 200,
