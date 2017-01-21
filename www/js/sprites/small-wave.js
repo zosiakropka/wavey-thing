@@ -3,17 +3,16 @@ define([
   ], function(
     Q
   ){
-    var WAVE_DELTA = 50; // half the amplitude of wave bouncing
+    var WAVE_DELTA = 20; // half the amplitude of wave bouncing
     var WAVE_FREQ = 0.5; // 2 seconds for wave animation
     var WAVE_OFFSET = 1; // difference between wave motion and animation
 
     Q.Sprite.extend("SmallWave", {
       init: function(p) {
 
-        var player = Q("Player").first();
         var startingLocation = {
-          x: player.p.x + 100,
-          y: player.p.y - 50
+          x: 10,
+          y: 30
         };
 
         this._super(p, {

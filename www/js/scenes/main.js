@@ -46,12 +46,13 @@ define([
     }
 
     function _insertPlayerOnStage(stage) {
+      stage.insert(new SmallWave({age: 0}));
+
       var player = stage.insert(new Player({
         x: 10,
         y: 0
       }));
 
-      stage.insert(new SmallWave({age: 0}));
       stage.insert(new Wave({age: 0}));
       stage.insert(new Wave({age: 0.7}));
       stage.insert(new Wave({age: 1.6}));

@@ -6,7 +6,7 @@ define([
     Q,
     mediator
   ){
-    var WAVE_DISTANCE = 700; // average distance between player and wave
+    var WAVE_DISTANCE = 950; // average distance between player and wave
     var WAVE_DELTA = 300; // half the amplitude of wave bouncing
     var WAVE_FREQ = 0.5; // 2 seconds for wave animation
     var WAVE_OFFSET = 1; // difference between wave motion and animation
@@ -14,10 +14,9 @@ define([
     Q.Sprite.extend("Wave", {
       init: function(p) {
 
-        var player = Q("Player").first();
         var startingLocation = {
-          x: player.p.x - WAVE_DISTANCE,
-          y: player.p.y - 200
+          x: 10 - WAVE_DISTANCE,
+          y: 0 - 200
         };
 
         this._super(p, {
