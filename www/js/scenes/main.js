@@ -48,7 +48,9 @@ define([
         x: 10,
         y: 0
       }));
-      stage.insert(new Wave());
+      stage.insert(new Wave({age: 0}));
+      stage.insert(new Wave({age: 0.7}));
+      stage.insert(new Wave({age: 1.6}));
 
       stage
         .add('viewport')
