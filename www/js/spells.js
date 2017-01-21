@@ -25,14 +25,15 @@ define([
       $spellButtons.html('');
 
       var $button;
+      var shuffled_spell_ids = _(SPELL_IDS).shuffle();
 
-      $button = _get$spellButton(SPELL_IDS[0], BUTTON_POSITIONS.LEFT_TOP);
+      $button = _get$spellButton(shuffled_spell_ids[0], BUTTON_POSITIONS.LEFT_TOP);
       $spellButtons.append($button);
 
-      $button = _get$spellButton(SPELL_IDS[1], BUTTON_POSITIONS.LEFT_BOTTOM);
+      $button = _get$spellButton(shuffled_spell_ids[1], BUTTON_POSITIONS.LEFT_BOTTOM);
       $spellButtons.append($button);
 
-      $button = _get$spellButton(SPELL_IDS[2], BUTTON_POSITIONS.RIGHT_TOP);
+      $button = _get$spellButton(shuffled_spell_ids[2], BUTTON_POSITIONS.RIGHT_TOP);
       $spellButtons.append($button);
     }
 
