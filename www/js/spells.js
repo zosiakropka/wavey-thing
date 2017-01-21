@@ -1,17 +1,19 @@
 define([
     'jquery',
-    'underscore'
+    'underscore',
+    'mediator-js'
   ], function(
     $,
-    _
+    _,
+    mediator
   ) {
-    var SPELL_BUTTON_IDS = [
+    var SPELL_IDS = [
       'kamien',
       'papier',
       'nozyce'
     ];
 
-    var BUTTON_TYPES = {
+    var BUTTON_POSITIONS = {
       LEFT_TOP: 'left-top',
       LEFT_BOTTOM: 'left-bottom',
       RIGHT_TOP: 'right-top'
@@ -24,23 +26,24 @@ define([
 
       var $button;
 
-      $button = _get$spellButton(SPELL_BUTTON_IDS[0], BUTTON_TYPES.LEFT_TOP);
+      $button = _get$spellButton(SPELL_IDS[0], BUTTON_POSITIONS.LEFT_TOP);
       $spellButtons.append($button);
 
-      $button = _get$spellButton(SPELL_BUTTON_IDS[1], BUTTON_TYPES.LEFT_BOTTOM);
+      $button = _get$spellButton(SPELL_IDS[1], BUTTON_POSITIONS.LEFT_BOTTOM);
       $spellButtons.append($button);
 
-      $button = _get$spellButton(SPELL_BUTTON_IDS[2], BUTTON_TYPES.RIGHT_TOP);
+      $button = _get$spellButton(SPELL_IDS[2], BUTTON_POSITIONS.RIGHT_TOP);
       $spellButtons.append($button);
     }
 
-    function _get$spellButton(buttonId, buttonPosition) {
+    function _get$spellButton(spellId, buttonPosition) {
       var $button = $('<div>');
       $button.addClass('spell-buttons__button--' + buttonPosition);
-      $button.data('button-id', buttonId);
+      $button.data('button-id', spellId);
       $button.text('The button');
       $button.click(function() {
-        console.info('button clicked', buttonId);
+        mediator.publish('spell:cast', spellId)
+        console.info('button clicked', spellId);
       });
       return $button;
     }
