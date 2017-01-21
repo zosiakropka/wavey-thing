@@ -41,7 +41,7 @@ define([
       }));
 
       stage.insert(new Q.UI.Button({
-        asset: 'play-again.png',
+        asset: 'logo/pmmestudio.jpg',
         x: Q.width / 3,
         y: 0
       }), gameoverContainer);

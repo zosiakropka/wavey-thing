@@ -22,7 +22,8 @@ define([
         'fala/fala_calosc.png',
         'background-floor.png',
         'background-wall.png',
-        'play-again.png'
+        'play-again.png',
+        'logo/pmmestudio.jpg'
       ],
       function() {
         console.log('loaded some assets!');
