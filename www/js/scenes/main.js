@@ -74,6 +74,7 @@ define([
         .follow(player);
 
       stage.viewport.offsetY = 50;
+      stage.viewport.offsetX = -220;
 
       stage.on('postrender', function() {
         mediator.publish('stage:scene', 'main');
