@@ -32,7 +32,6 @@ define([
         y: 0
       }, function() {
         Q.stageScene('main');
-        mediator.publish('stage:scene', 'main');
       }), buttonContainer);
 
       var gameoverContainer = stage.insert(new Q.UI.Container({
@@ -55,5 +54,9 @@ define([
         x: - Q.width / 3,
         y: 0
       }), gameoverContainer);
+
+      stage.on('postrender', function() {
+        mediator.publish('stage:scene', 'gameover');
+      });
     });
   });

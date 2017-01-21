@@ -55,6 +55,10 @@ define([
         .follow(player);
 
       stage.viewport.offsetY = SCREEN_MIDDLE_Y - SCREEN_HEIGHT + FLOOR_Y - (player.p.h / 2);
+
+      stage.on('postrender', function() {
+        mediator.publish('stage:scene', 'main');
+      });
     }
 
     function _insertSpellButtons() {

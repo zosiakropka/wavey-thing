@@ -8,7 +8,6 @@ define([
   ) {
     function startGame() {
       Q.stageScene("main");
-      mediator.publish('stage:scene', 'main');
     }
 
     return {

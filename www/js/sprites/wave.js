@@ -41,7 +41,6 @@ define([
 
       hit: function() {
         Q.stageScene('gameover');
-        mediator.publish('stage:scene', 'gameover');
       }
 
     });
