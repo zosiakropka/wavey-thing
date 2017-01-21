@@ -63,7 +63,9 @@ define([
         this.p.type = 0;
         this.p.collisionMask = Q.SPRITE_NONE;
 
-        Q.stageScene('gameover', 1);
+        if (!Q.stage(1)) {
+          Q.stageScene('gameover', 1);
+        }
       }
 
     });
