@@ -20,8 +20,8 @@ define([
         'nekromanta.png',
         'przeszkoda_kolce1.png',
         'przeszkoda_kolce2.png',
-        'fala/fala_calosc2.png',
-        'fala_mala/fala_mala_2.png',
+        'wave-sprite.png',
+        'small-wave-sprite.png',
         'background-floor.png',
         'background-wall.png',
         'play-now.png',
@@ -40,11 +40,11 @@ define([
           tilew: 200,
           tileh: 300
         });
-        Q.sheet('wave', 'fala/fala_calosc2.png', {
+        Q.sheet('wave', 'wave-sprite.png', {
           tilew: 5917/6,
           tileh: 1000
         });
-        Q.sheet('small-wave', 'fala_mala/fala_mala_2.png', {
+        Q.sheet('small-wave', 'small-wave-sprite.png', {
           tilew: 700,
           tileh: 400
         });
