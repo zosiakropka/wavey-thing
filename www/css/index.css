@@ -1,3 +1,10 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .spell-buttons__button--left-top,
 .spell-buttons__button--left-bottom,
 .spell-buttons__button--right-top {
@@ -5,7 +12,23 @@
   z-index: 1000;
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-size: contain;
+  background-position: center;
+}
+.spell-buttons__button--left-top[data-button-id="kamien"],
+.spell-buttons__button--left-bottom[data-button-id="kamien"],
+.spell-buttons__button--right-top[data-button-id="kamien"] {
+  background-image: url(../images/kamien-icon.png);
+}
+.spell-buttons__button--left-top[data-button-id="papier"],
+.spell-buttons__button--left-bottom[data-button-id="papier"],
+.spell-buttons__button--right-top[data-button-id="papier"] {
+  background-image: url(../images/papier-icon.png);
+}
+.spell-buttons__button--left-top[data-button-id="nozyce"],
+.spell-buttons__button--left-bottom[data-button-id="nozyce"],
+.spell-buttons__button--right-top[data-button-id="nozyce"] {
+  background-image: url(../images/nozyce-icon.png);
 }
 
 .spell-buttons__button--left-top {
@@ -21,11 +44,4 @@
 .spell-buttons__button--right-top {
   bottom: calc(25% + 140px);
   right: 5%;
-}
-
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }

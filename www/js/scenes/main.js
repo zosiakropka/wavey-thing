@@ -56,7 +56,6 @@ define([
     }
 
     function _insertSpellButtonsOnStage(stage) {
-      console.info(Spells);
       Spells.renderSpellButtons();
     }
   });
