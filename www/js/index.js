@@ -2,13 +2,15 @@ requirejs.config({
   paths: {
     'components': '../../bower_components',
     'underscore': '../../bower_components/underscore/underscore',
-    'jquery': '../../bower_components/jquery/dist/jquery'
+    'jquery': '../../bower_components/jquery/dist/jquery',
+    'require-promise': '../../bower_components/requirejs-promise/requirejs-promise'
   }
 });
 
 requirejs([
-    'scenes/main'
+    'gameplay'
   ], function(
+    GamePlay
   ) {
     var app = {
       // Application Constructor
@@ -39,4 +41,5 @@ requirejs([
 
     app.initialize();
 
+    GamePlay.startGame();
   });

@@ -1,5 +1,5 @@
 define([
-    'game',
+    'require-promise!game',
     'sprites/obstacle'
   ], function(
     Q

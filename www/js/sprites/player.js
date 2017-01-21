@@ -1,5 +1,5 @@
 define([
-    'game',
+    'require-promise!game',
     'mediator'
   ], function(
     Q,
@@ -17,8 +17,10 @@ define([
         this.add('2d');
 
         mediator.on('spell:cast', function() {
-          var obstacles = Q('Obstacle');
-          obstacles.first().destroy();
+          var obstacle = Q('Obstacle').first();
+          if (!obstacle) { return; }
+
+          obstacle.destroy();
         })
       },
 

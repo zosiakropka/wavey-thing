@@ -1,5 +1,5 @@
 define([
-    'game'
+    'require-promise!game'
   ], function(
     Q
   ){
@@ -33,7 +33,6 @@ define([
         this.p.vy = 0;
         this.p.opacity = 0.5;
       }
-
     });
 
     return Q.Obstacle;
