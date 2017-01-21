@@ -57,6 +57,8 @@ define([
         }
         this.p.type = 0;
         this.p.collisionMask = Q.SPRITE_NONE;
+
+        Q.stageScene('gameover');
       }
 
     });

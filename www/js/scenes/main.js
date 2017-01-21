@@ -6,8 +6,7 @@ define([
     'game-objects/obstacle-spawner',
     'spells',
     'underscore',
-    'mediator',
-    'scenes/flooded'
+    'mediator'
   ], function(
     Q,
     Player,
