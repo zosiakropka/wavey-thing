@@ -2,6 +2,7 @@ define([
     'require-promise!game',
     'sprites/player',
     'sprites/wave',
+    'sprites/small-wave',
     'game-objects/obstacle-spawner',
     'spells',
     'underscore',
@@ -10,6 +11,7 @@ define([
     Q,
     Player,
     Wave,
+    SmallWave,
     ObstacleSpawner,
     Spells,
     _,
@@ -32,11 +34,11 @@ define([
         speedX: 0.5
       }));
 
-      stage.insert(new Q.Repeater({
-        asset: 'background-floor.png',
-        speedX: 1,
-        y: FLOOR_Y
-      }));
+      // stage.insert(new Q.Repeater({
+      //   asset: 'background-floor.png',
+      //   speedX: 1,
+      //   y: FLOOR_Y
+      // }));
     }
 
     function _insertObstacleSpawnerOnStage(stage) {
@@ -48,9 +50,18 @@ define([
         x: 10,
         y: 0
       }));
+
+      stage.insert(new SmallWave({age: 0}));
       stage.insert(new Wave({age: 0}));
       stage.insert(new Wave({age: 0.7}));
       stage.insert(new Wave({age: 1.6}));
+
+      stage.insert(new Q.Repeater({
+        asset: 'background-floor.png',
+        speedX: 1,
+        y: FLOOR_Y
+      }));
+      // stage.insert(new SmallWave({age: 0}));
 
       stage
         .add('viewport')

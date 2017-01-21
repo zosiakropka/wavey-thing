@@ -17,7 +17,7 @@ define([
         var player = Q("Player").first();
         var startingLocation = {
           x: player.p.x - WAVE_DISTANCE,
-          y: player.p.y
+          y: player.p.y - 200
         };
 
         this._super(p, {
@@ -26,9 +26,10 @@ define([
           y: startingLocation.y,
           vx: 1000,
           gravity: 0,
+          // opacity: 0.8,
           age: 0, // usually overridden
           frame: 0,
-          scale: 3,
+          scale: 1,
           sheet: "wave"
         });
 
@@ -52,7 +53,6 @@ define([
         Q.stageScene('gameover');
         this.p.type = 0;
         this.p.collisionMask = Q.SPRITE_NONE;
-        this.p.opacity = 0.5;
       }
 
     });
