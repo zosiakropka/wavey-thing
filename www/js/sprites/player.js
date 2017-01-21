@@ -17,13 +17,26 @@ define([
         this.add('2d');
 
         mediator.on('spell:cast', function() {
-          var obstacle = Q('Obstacle').first();
+          var obstacle = _getFirstObstacle();
           if (!obstacle) { return; }
 
           obstacle.destroy();
         })
       }
     });
+
+    function _getFirstObstacle() {
+      return _([
+        'Brambles',
+        'Skulls'
+      ]).chain()
+        .map(function(className) {
+          return Q(className).first()
+        })
+        .compact()
+        .first()
+        .value();
+    }
 
     return Q.Player;
   });

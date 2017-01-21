@@ -3,16 +3,14 @@ define([
   ], function(
     Q
   ){
-    Q.Sprite.extend("Obstacle", {
-      init: function() {
-
+    Q.Sprite.extend('Obstacle', {
+      init: function(p) {
         var player = Q("Player").first();
-        this._super({
+        this._super(p, {
           x: player.p.x + Q.width + 50,
-          y: player.p.y,
+          y: -40,
           frame: 0,
-          scale: 1,
-          sheet: "brambles"
+          scale: 1
         });
 
         this.on("hit");
@@ -34,5 +32,4 @@ define([
     });
 
     return Q.Obstacle;
-
 });

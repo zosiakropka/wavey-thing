@@ -1,11 +1,19 @@
 define([
     'require-promise!game',
-    'sprites/obstacle'
+    'sprites/obstacles/brambles',
+    'sprites/obstacles/skulls',
+    'underscore'
   ], function(
-    Q
+    Q,
+    Brambles,
+    Skulls,
+    _
   ){
-
-    Q.GameObject.extend("ObstacleSpawner",{
+    var OBSTACLE_CLASSES = [
+      Q.Brambles,
+      Q.Skulls
+    ];
+    Q.GameObject.extend('ObstacleSpawner', {
       init: function() {
         this.p = {
           launchDelay: 0.75,
@@ -18,7 +26,8 @@ define([
         this.p.launch -= dt;
 
         if(this.p.launch < 0) {
-          this.stage.insert(new Q.Obstacle());
+          var Obstacle = _(OBSTACLE_CLASSES).sample();
+          this.stage.insert(new Obstacle());
           this.p.launch = this.p.launchDelay + this.p.launchRandom * Math.random();
         }
       }
