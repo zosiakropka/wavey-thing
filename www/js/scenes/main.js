@@ -1,10 +1,12 @@
 define([
     'game',
     'sprites/player',
+    'game-objects/obstacle-spawner',
     'jquery'
   ], function(
     Q,
     Player,
+    ObstacleSpawner,
     $
   ) {
     var SCREEN_HEIGHT = $(window).height();
@@ -22,6 +24,8 @@ define([
         speedX: 1,
         y: FLOOR_Y
       }));
+
+      stage.insert(new ObstacleSpawner());
 
       var player = stage.insert(new Player({
         x: 10,

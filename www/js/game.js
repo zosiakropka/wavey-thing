@@ -10,10 +10,14 @@ define([
       .controls()
       .touch();
 
-      Q.load(['peace.jpg', 'background-floor.png', 'background-wall.png'],
+      Q.load(['peace.jpg', 'brambles.jpg', 'background-floor.png', 'background-wall.png'],
         function() {
           console.log('loaded some assets!');
           Q.sheet('peace', 'peace.jpg', {
+            tilew: 200,
+            tileh: 300
+          });
+          Q.sheet('brambles', 'brambles.jpg', {
             tilew: 200,
             tileh: 300
           });
