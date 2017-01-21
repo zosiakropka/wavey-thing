@@ -1,11 +1,13 @@
 define([
     'game',
     'sprites/player',
+    'sprites/wave',
     'game-objects/obstacle-spawner',
     'jquery'
   ], function(
     Q,
     Player,
+    Wave,
     ObstacleSpawner,
     $
   ) {
@@ -41,6 +43,7 @@ define([
         x: 10,
         y: 0
       }));
+      stage.insert(new Wave());
 
       stage
         .add('viewport')

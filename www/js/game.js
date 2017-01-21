@@ -13,6 +13,7 @@ define([
       Q.load([
           'peace.jpg',
           'przeszkoda_kolce1.png',
+          'przeszkoda_kolce2.png',
           'background-floor.png',
           'background-wall.png'
         ],
@@ -23,6 +24,10 @@ define([
             tileh: 300
           });
           Q.sheet('brambles', 'przeszkoda_kolce1.png', {
+            tilew: 200,
+            tileh: 300
+          });
+          Q.sheet('wave', 'przeszkoda_kolce2.png', {
             tilew: 200,
             tileh: 300
           });
