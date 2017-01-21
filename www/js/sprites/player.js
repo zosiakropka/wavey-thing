@@ -15,6 +15,10 @@ define([
 
         // Add in pre-made components to get up and running quickly
         this.add('2d, platformerControls');
+      },
+
+      step: function() {
+        this.p.vx += 1000;
       }
 
     });
