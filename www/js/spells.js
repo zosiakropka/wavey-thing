@@ -1,7 +1,7 @@
 define([
     'jquery',
     'underscore',
-    'mediator-js'
+    'mediator'
   ], function(
     $,
     _,
