@@ -10,7 +10,6 @@ define([
         this._super({
           x: player.p.x + Q.width + 50,
           y: player.p.y,
-          age: 0,
           frame: 0,
           scale: 1,
           sheet: "brambles"
@@ -25,7 +24,6 @@ define([
         this.p.age += dt;
 
         if(this.p.x < -100) { this.destroy(); }
-        if(this.p.age > 9) { this.destroy(); }
       },
 
       hit: function() {
