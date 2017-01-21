@@ -8,9 +8,9 @@ define([
     mediator
   ) {
     var SPELL_IDS = [
-      'kamien',
-      'papier',
-      'nozyce'
+      'feist',
+      'fire',
+      'ice'
     ];
 
     var BUTTON_POSITIONS = {
