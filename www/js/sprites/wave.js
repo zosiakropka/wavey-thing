@@ -27,6 +27,7 @@ define([
           gravity: 0,
           // opacity: 0.8,
           age: 0, // usually overridden
+          maxAge: 0, // might cause autodestruction
           frame: 0,
           scale: 1,
           sheet: "wave"
@@ -41,6 +42,9 @@ define([
         this.p.x = this.p.xBase + this.waveMotionX();
 
         this.p.frame = Math.floor(this.p.age * 6 * WAVE_FREQ + WAVE_OFFSET) % 6;
+        if (this.p.maxAge && (this.p.age > this.p.maxAge)) {
+          this.destroy();
+        }
       },
 
       // returns a distance within (-WAVE_DELTA, WAVE_DELTA)
@@ -52,7 +56,8 @@ define([
         if (this.p.type) {
           this.stage.insert(new Q.Wave({
             xBase: this.p.x - 700,
-            age: this.p.age
+            age: Math.random() * 2,
+            maxAge: 6
           }));
         }
         this.p.type = 0;

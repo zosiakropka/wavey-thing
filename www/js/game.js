@@ -20,6 +20,7 @@ define([
         'nekromanta.png',
         'wave-sprite.png',
         'small-wave-sprite.png',
+        'mini-wave-sprite.png',
         'background-floor.png',
         'background-wall.png',
         'obstacles/brambles.png',
@@ -50,6 +51,10 @@ define([
         });
         Q.sheet('small-wave', 'small-wave-sprite.png', {
           tilew: 700,
+          tileh: 400
+        });
+        Q.sheet('mini-wave', 'mini-wave-sprite.png', {
+          tilew: 400,
           tileh: 400
         });
 

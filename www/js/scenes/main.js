@@ -3,6 +3,7 @@ define([
     'sprites/player',
     'sprites/wave',
     'sprites/small-wave',
+    'sprites/mini-wave',
     'game-objects/obstacle-spawner',
     'spells',
     'underscore',
@@ -12,6 +13,7 @@ define([
     Player,
     Wave,
     SmallWave,
+    MiniWave,
     ObstacleSpawner,
     Spells,
     _,
@@ -56,6 +58,9 @@ define([
       stage.insert(new Wave({age: 0}));
       stage.insert(new Wave({age: 0.7}));
       stage.insert(new Wave({age: 1.6}));
+      stage.insert(new MiniWave({x: -250, y: -60, frame: 0, age: 0.2}));
+      stage.insert(new MiniWave({x: -350, y: -20, frame: 2, age: 0.9}));
+      stage.insert(new MiniWave({x: -150, y: -20, frame: 1, age: 0.5}));
 
       stage.insert(new Q.Repeater({
         asset: 'background-floor.png',
