@@ -1,0 +1,15 @@
+{
+  "name": "mediator",
+  "homepage": "https://github.com/ajacksified/Mediator.js",
+  "version": "0.9.9",
+  "_release": "0.9.9",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.9",
+    "commit": "6b4e43431735d74480ec32154777a9071a1c3193"
+  },
+  "_source": "https://github.com/ajacksified/Mediator.js.git",
+  "_target": "^0.9.9",
+  "_originalSource": "mediator",
+  "_direct": true
+}
