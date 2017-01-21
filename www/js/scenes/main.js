@@ -3,15 +3,13 @@ define([
     'sprites/player',
     'sprites/wave',
     'game-objects/obstacle-spawner',
-    'spells',
-    'jquery'
+    'spells'
   ], function(
     Q,
     Player,
     Wave,
     ObstacleSpawner,
-    Spells,
-    $
+    Spells
   ) {
     var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
