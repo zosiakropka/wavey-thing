@@ -15,15 +15,19 @@ define([
 
     function _renderHeaderOnStage(stage) {
       var labelContainer = stage.insert(new Q.UI.Container({
-        y: 50,
+        fill: 'rgba(180,0,0,0.5)',
+        border: 5,
+        w: 700,
+        h: 200,
+        y: 150,
         x: Q.width / 2
       }));
 
       stage.insert(new Q.UI.Text({
-        label: "YOU DiED",
+        label: "YOU DIED",
         color: "black",
         x: 0,
-        y: 0,
+        y: -50,
         size: 100,
       }), labelContainer);
     }
@@ -39,6 +43,7 @@ define([
         x: 0,
         y: 0
       }, function() {
+        Q.clearStages();
         Q.stageScene('main');
       }), playAgainContainer);
     }
@@ -53,6 +58,13 @@ define([
         asset: 'logo/pmmestudio.jpg',
         x: Q.width / 3,
         y: 0
+      }), creditsContainer);
+      stage.insert(new Q.UI.Button({
+        fill: 'white',
+        w: 200,
+        h: 300,
+        x: - Q.width / 3,
+        y: 0,
       }), creditsContainer);
       stage.insert(new Q.UI.Button({
         asset: 'logo/pinkgreen.png',
