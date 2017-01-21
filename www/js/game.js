@@ -16,6 +16,7 @@ define([
           'nekromanta.png',
           'przeszkoda_kolce1.png',
           'przeszkoda_kolce2.png',
+          'fala/fala_calosc.png',
           'background-floor.png',
           'background-wall.png'
         ],
@@ -29,9 +30,9 @@ define([
             tilew: 200,
             tileh: 300
           });
-          Q.sheet('wave', 'przeszkoda_kolce2.png', {
-            tilew: 200,
-            tileh: 300
+          Q.sheet('wave', 'fala/fala_calosc.png', {
+            tilew: 1000/6,
+            tileh: 169
           });
           // Q.compileSheets("sprites.png","sprites.json");
           Q.stageScene("main");

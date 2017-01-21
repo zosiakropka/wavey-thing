@@ -3,7 +3,7 @@ define([
   ], function(
     Q
   ){
-    var WAVE_DISTANCE = 500;
+    var WAVE_DISTANCE = 700;
     var WAVE_FACTOR = 0.7;
 
     Q.Sprite.extend("Wave", {
@@ -11,13 +11,13 @@ define([
 
         var player = Q("Player").first();
         this._super({
-          x: player.p.x - 500,
+          x: player.p.x - WAVE_DISTANCE,
           y: player.p.y,
           vx: 900,
           gravity: 0,
           age: 0,
           frame: 0,
-          scale: 1,
+          scale: 3,
           sheet: "wave"
         });
 
@@ -28,6 +28,8 @@ define([
 
       step: function(dt) {
         this.p.age += dt;
+
+        this.p.frame = Math.floor(this.p.age * 3) % 6;
 
         var player = Q("Player").first();
         this.p.vx += (player.p.x - this.p.x - WAVE_DISTANCE) * WAVE_FACTOR;
