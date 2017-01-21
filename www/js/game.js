@@ -7,7 +7,6 @@ define([
       .setup({
         maximize: true
       })
-      .controls()
       .touch();
 
       Q.load([
