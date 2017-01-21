@@ -3,12 +3,14 @@ define([
     'sprites/player',
     'sprites/wave',
     'game-objects/obstacle-spawner',
+    'spells',
     'jquery'
   ], function(
     Q,
     Player,
     Wave,
     ObstacleSpawner,
+    Spells,
     $
   ) {
     var SCREEN_HEIGHT = $(window).height();
@@ -19,6 +21,7 @@ define([
       _insertBackgroundOnStage(stage);
       _insertObstacleSpawnerOnStage(stage);
       _insertPlayerOnStage(stage);
+      _insertSpellButtonsOnStage(stage);
     });
 
     function _insertBackgroundOnStage(stage) {
@@ -50,5 +53,10 @@ define([
         .follow(player);
 
       stage.viewport.offsetY = SCREEN_MIDDLE_Y - SCREEN_HEIGHT + FLOOR_Y;
+    }
+
+    function _insertSpellButtonsOnStage(stage) {
+      console.info(Spells);
+      Spells.renderSpellButtons();
     }
   });
