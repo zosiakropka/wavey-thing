@@ -11,8 +11,8 @@ define([
           x: player.p.x + Q.width + 50,
           y: player.p.y,
           age: 0,
-          frame: Math.random() < 0.5 ? 1 : 0,
-          scale: 0.7,
+          frame: 0,
+          scale: 1,
           sheet: "brambles"
         });
 
