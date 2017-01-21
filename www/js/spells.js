@@ -39,8 +39,7 @@ define([
     function _get$spellButton(spellId, buttonPosition) {
       var $button = $('<div>');
       $button.addClass('spell-buttons__button--' + buttonPosition);
-      $button.data('button-id', spellId);
-      $button.text('The button');
+      $button.attr('data-button-id', spellId);
       $button.click(function() {
         mediator.publish('spell:cast', spellId)
         console.info('button clicked', spellId);
