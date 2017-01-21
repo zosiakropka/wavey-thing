@@ -9,7 +9,7 @@ define([
 
       init: function(p) {
         this._super(p, {
-          sheet: "peace",  // Setting a sprite sheet sets sprite width and height
+          sheet: "nekromanta",  // Setting a sprite sheet sets sprite width and height
           vx: 1000,
           gravity: 0
         });

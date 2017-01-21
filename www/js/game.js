@@ -13,7 +13,7 @@ define([
       .touch();
 
       Q.load([
-          'peace.jpg',
+          'nekromanta.png',
           'przeszkoda_kolce1.png',
           'przeszkoda_kolce2.png',
           'background-floor.png',
@@ -21,9 +21,9 @@ define([
         ],
         function() {
           console.log('loaded some assets!');
-          Q.sheet('peace', 'peace.jpg', {
-            tilew: 200,
-            tileh: 300
+          Q.sheet('nekromanta', 'nekromanta.png', {
+            tilew: 317,
+            tileh: 355
           });
           Q.sheet('brambles', 'przeszkoda_kolce1.png', {
             tilew: 200,
