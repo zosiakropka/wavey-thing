@@ -1,7 +1,10 @@
 define([
-    'require-promise!game'
+    'require-promise!game',
+    'mediator',
+    'scenes/gameover'
   ], function(
-    Q
+    Q,
+    mediator
   ){
     var WAVE_DISTANCE = 700;
     var WAVE_FACTOR = 0.7;
@@ -37,7 +40,8 @@ define([
       },
 
       hit: function() {
-        console.log('you die!')
+        Q.stageScene('gameover');
+        mediator.publish('stage:scene', 'gameover');
       }
 
     });

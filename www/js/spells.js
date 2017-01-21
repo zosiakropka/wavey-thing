@@ -23,6 +23,7 @@ define([
       var $spellButtons = $('.spell-buttons');
       $spellButtons.find('.spell-buttons__button').off();
       $spellButtons.html('');
+      $spellButtons.show();
 
       var $button;
       var shuffled_spell_ids = _(SPELL_IDS).shuffle();
@@ -43,10 +44,18 @@ define([
       $button.attr('data-button-id', spellId);
       $button.click(function() {
         mediator.publish('spell:cast', spellId)
-        console.info('button clicked', spellId);
       });
       return $button;
     }
+
+    mediator.subscribe('stage:scene', function(scene) {
+      if (scene === 'main') {
+        $('.spell-buttons').show();
+      } else {
+        $('.spell-buttons').hide();
+      }
+
+    });
 
     return {
       renderSpellButtons: renderSpellButtons

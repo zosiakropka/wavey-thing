@@ -22,12 +22,7 @@ define([
 
           obstacle.destroy();
         })
-      },
-
-      step: function() {
-        // this.p.vx += 1000;
       }
-
     });
 
     return Q.Player;

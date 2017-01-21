@@ -22,7 +22,6 @@ define([
           this.p.launch = this.p.launchDelay + this.p.launchRandom * Math.random();
         }
       }
-
     });
 
     return Q.ObstacleSpawner;

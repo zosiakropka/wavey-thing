@@ -21,7 +21,8 @@ define([
         'przeszkoda_kolce2.png',
         'fala/fala_calosc.png',
         'background-floor.png',
-        'background-wall.png'
+        'background-wall.png',
+        'play-again.png'
       ],
       function() {
         console.log('loaded some assets!');
