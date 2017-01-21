@@ -26,6 +26,7 @@ define([
         'background-wall.png',
         'play-again.png',
         'logo/pmmestudio.jpg',
+        'logo/pinkgreen.png',
         'pmme_magic_metal.mp3'
       ],
       function() {

@@ -45,14 +45,10 @@ define([
         y: 0
       }), gameoverContainer);
       stage.insert(new Q.UI.Button({
-        asset: 'play-again.png',
-        x: 0,
-        y: 0
-      }), gameoverContainer);
-      stage.insert(new Q.UI.Button({
-        asset: 'play-again.png',
+        asset: 'logo/pinkgreen.png',
         x: - Q.width / 3,
-        y: 0
+        y: 0,
+        scale: 0.2
       }), gameoverContainer);
 
       stage.on('postrender', function() {
