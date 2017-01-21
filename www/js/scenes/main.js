@@ -50,7 +50,7 @@ define([
 
       var player = stage.insert(new Player({
         x: 10,
-        y: 0
+        y: -100
       }));
 
       stage.insert(new Wave({age: 0}));
@@ -68,7 +68,7 @@ define([
         .add('viewport')
         .follow(player);
 
-      stage.viewport.offsetY = SCREEN_MIDDLE_Y - SCREEN_HEIGHT + FLOOR_Y - (player.p.h / 2);
+      stage.viewport.offsetY = 50;
 
       stage.on('postrender', function() {
         mediator.publish('stage:scene', 'main');

@@ -15,8 +15,6 @@ define([
           sheet: "brambles"
         });
 
-        // this.add('2d');
-
         this.on("hit");
       },
 
