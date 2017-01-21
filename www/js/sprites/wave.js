@@ -49,7 +49,12 @@ define([
       },
 
       hit: function() {
-        Q.stageScene('gameover');
+        if (this.p.type) {
+          this.stage.insert(new Q.Wave({
+            xBase: this.p.x - 700,
+            age: this.p.age
+          }));
+        }
         this.p.type = 0;
         this.p.collisionMask = Q.SPRITE_NONE;
       }
