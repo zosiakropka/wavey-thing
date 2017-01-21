@@ -63,5 +63,5 @@ jspm_packages
 
 # End of https://www.gitignore.io/api/apachecordova,node
 
+**/Thumbs.db
 .DS_Store
-Thumbs.db
