@@ -24,6 +24,7 @@ define([
         'fala_mala/fala_mala_2.png',
         'background-floor.png',
         'background-wall.png',
+        'play-now.png',
         'play-again.png',
         'logo/pmmestudio.jpg',
         'logo/pinkgreen.png',

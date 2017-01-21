@@ -8,6 +8,12 @@ define([
     mediator
   ) {
     Q.scene('gameover', function(stage) {
+      _renderHeaderOnStage(stage);
+      _renderPlayAgainOnStage(stage);
+      _renderCreditsOnStage(stage);
+    });
+
+    function _renderHeaderOnStage(stage) {
       var labelContainer = stage.insert(new Q.UI.Container({
         y: 50,
         x: Q.width / 2
@@ -20,8 +26,10 @@ define([
         y: 0,
         size: 100,
       }), labelContainer);
+    }
 
-      var buttonContainer = stage.insert(new Q.UI.Container({
+    function _renderPlayAgainOnStage(stage) {
+      var playAgainContainer = stage.insert(new Q.UI.Container({
         y: Q.height / 2,
         x: Q.width / 2
       }));
@@ -32,9 +40,11 @@ define([
         y: 0
       }, function() {
         Q.stageScene('main');
-      }), buttonContainer);
+      }), playAgainContainer);
+    }
 
-      var gameoverContainer = stage.insert(new Q.UI.Container({
+    function _renderCreditsOnStage(stage) {
+      var creditsContainer = stage.insert(new Q.UI.Container({
         y: Q.height - 200,
         x: Q.width / 2
       }));
@@ -43,16 +53,16 @@ define([
         asset: 'logo/pmmestudio.jpg',
         x: Q.width / 3,
         y: 0
-      }), gameoverContainer);
+      }), creditsContainer);
       stage.insert(new Q.UI.Button({
         asset: 'logo/pinkgreen.png',
         x: - Q.width / 3,
         y: 0,
         scale: 0.2
-      }), gameoverContainer);
+      }), creditsContainer);
 
       stage.on('postrender', function() {
         mediator.publish('stage:scene', 'gameover');
       });
-    });
+    }
   });
