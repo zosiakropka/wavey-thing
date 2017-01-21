@@ -8,7 +8,7 @@ define([
         var player = Q("Player").first();
         this._super(p, {
           x: player.p.x + Q.width + 50,
-          y: -40,
+          y: 0,
           frame: 0,
           scale: 1
         });

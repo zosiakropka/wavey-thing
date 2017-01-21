@@ -21,7 +21,7 @@ define([
   ) {
     var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
-    var FLOOR_Y = SCREEN_HEIGHT * 0.8;
+    var FLOOR_Y = SCREEN_HEIGHT - 189;
 
     Q.scene('main', function(stage){
       _insertBackgroundOnStage(stage);
