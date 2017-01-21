@@ -1,11 +1,14 @@
 define([
     'quintus-all'
   ], function(
+    Quintus
   ) {
     var Q = Quintus()
       .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
       .setup({
-        maximize: true
+        width: 1920,
+        height: 1080,
+        scaleToFit: true
       })
       .touch();
 
