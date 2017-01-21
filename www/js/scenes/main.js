@@ -1,5 +1,5 @@
 define([
-    'game',
+    'require-promise!game',
     'sprites/player',
     'sprites/wave',
     'game-objects/obstacle-spawner',
