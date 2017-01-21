@@ -8,29 +8,9 @@ define([
     mediator
   ) {
     Q.scene('gameover', function(stage) {
-      _renderHeaderOnStage(stage);
       _renderPlayAgainOnStage(stage);
       _renderCreditsOnStage(stage);
     });
-
-    function _renderHeaderOnStage(stage) {
-      var labelContainer = stage.insert(new Q.UI.Container({
-        fill: 'rgba(180,0,0,0.5)',
-        border: 5,
-        w: 700,
-        h: 200,
-        y: 150,
-        x: Q.width / 2
-      }));
-
-      stage.insert(new Q.UI.Text({
-        label: "YOU DIED",
-        color: "black",
-        x: 0,
-        y: -50,
-        size: 100,
-      }), labelContainer);
-    }
 
     function _renderPlayAgainOnStage(stage) {
       var playAgainContainer = stage.insert(new Q.UI.Container({
