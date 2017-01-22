@@ -8,7 +8,7 @@ define([
     mediator
   ) {
     var SPELL_IDS = [
-      'feist',
+      'fist',
       'fire',
       'ice'
     ];

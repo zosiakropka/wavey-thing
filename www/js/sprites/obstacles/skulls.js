@@ -10,7 +10,7 @@ define([
         this._super({
           sheet: 'skulls',
           susceptibilities: [
-            'feist'
+            'fist'
           ]
         });
       }

@@ -30,6 +30,9 @@ define([
         'obstacles/brambles-sprite.png',
         'obstacles/skulls-sprite.png',
         'obstacles/waterhole-sprite.png',
+        'spells/fire-sprite.png',
+        'spells/fist-sprite.png',
+        'spells/ice-sprite.png',
         'points.png',
         'play-now.png',
         'play-again.png',
@@ -65,6 +68,18 @@ define([
         Q.sheet('mini-wave', 'mini-wave-sprite.png', {
           tilew: 400,
           tileh: 400
+        });
+        Q.sheet('spell-fire', 'spells/fire-sprite.png', {
+          tilew: 330,
+          tileh: 200
+        });
+        Q.sheet('spell-fist', 'spells/fist-sprite.png', {
+          tilew: 330,
+          tileh: 200
+        });
+        Q.sheet('spell-ice', 'spells/ice-sprite.png', {
+          tilew: 330,
+          tileh: 200
         });
 
         deferred.resolve(Q);

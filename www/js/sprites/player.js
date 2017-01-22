@@ -1,8 +1,10 @@
 define([
     'require-promise!game',
+    'sprites/spells/spell-effect',
     'mediator'
   ], function(
     Q,
+    SpellEffect,
     mediator
   ){
 
@@ -34,6 +36,7 @@ define([
 
       castSpell: function(spell) {
         this.play('cast_right', 1);
+        this.spawnSpellEffect(spell);
         var obstacle = getFirstObstacle();
         if (obstacle && obstacle.isSusceptibile(spell)) {
           this.p.score += 1;
@@ -45,6 +48,15 @@ define([
         function isObstacle(item) {
           return item && item.p && item.p.obstacle;
         }
+      },
+
+      spawnSpellEffect: function(spell) {
+
+        this.stage.insert(new SpellEffect({
+          x: this.p.x + 100,
+          y: this.p.y,
+          sheet: 'spell-' + spell
+        }));
       }
     });
 
