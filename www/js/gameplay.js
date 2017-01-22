@@ -12,7 +12,7 @@ define([
         Q('Player').first().castSpell(spell);
       });
 
-      Q.stageScene('intro');
+      Q.stageScene('start');
     }
 
     return {
