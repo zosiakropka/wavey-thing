@@ -36,7 +36,7 @@ define([
       function() {
         console.log('loaded some assets!');
         Q.sheet('nekromanta', 'nekromanta.png', {
-          tilew: 309,
+          tilew: 336,
           tileh: 354
         });
         Q.sheet('brambles', 'obstacles/brambles.png', {
