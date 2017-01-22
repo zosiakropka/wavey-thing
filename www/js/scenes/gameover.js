@@ -54,22 +54,9 @@ define([
       }));
 
       stage.insert(new Q.UI.Button({
-        asset: 'logo/pmmestudio.jpg',
-        x: Q.width / 3,
+        asset: 'logos.png',
+        x: 0,
         y: 0
-      }), creditsContainer);
-      stage.insert(new Q.UI.Button({
-        fill: 'white',
-        w: 200,
-        h: 300,
-        x: - Q.width / 3,
-        y: 0,
-      }), creditsContainer);
-      stage.insert(new Q.UI.Button({
-        asset: 'logo/pinkgreen.png',
-        x: - Q.width / 3,
-        y: 0,
-        scale: 0.2
       }), creditsContainer);
 
       stage.on('postrender', function() {

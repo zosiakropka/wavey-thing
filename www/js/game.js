@@ -33,8 +33,7 @@ define([
         'points.png',
         'play-now.png',
         'play-again.png',
-        'logo/pmmestudio.jpg',
-        'logo/pinkgreen.png',
+        'logos.png',
         'pmme_magic_metal.mp3'
       ],
       function() {
