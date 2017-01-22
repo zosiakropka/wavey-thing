@@ -1,6 +1,7 @@
 define([
     'require-promise!game',
     'sprites/player',
+    'repeaters/philar',
     'sprites/wave',
     'sprites/small-wave',
     'sprites/mini-wave',
@@ -11,6 +12,7 @@ define([
   ], function(
     Q,
     Player,
+    Philar,
     Wave,
     SmallWave,
     MiniWave,
@@ -25,6 +27,7 @@ define([
 
     Q.scene('main', function(stage){
       _insertBackgroundOnStage(stage);
+      _insertPhilarsOnStage(stage);
       _insertObstacleSpawnerOnStage(stage);
       _insertPlayerOnStage(stage);
       _insertSpellButtons();
@@ -33,7 +36,7 @@ define([
     function _insertBackgroundOnStage(stage) {
       stage.insert(new Q.Repeater({
         asset: 'background-wall.png',
-        speedX: 0.5
+        speedX: 0.33
       }));
 
       // stage.insert(new Q.Repeater({
@@ -41,6 +44,18 @@ define([
       //   speedX: 1,
       //   y: FLOOR_Y
       // }));
+    }
+
+    function _insertPhilarsOnStage(stage) {
+      stage.insert(new Q.Philar({
+        repeatW: 2500,
+        style: 'base'
+      }));
+
+      stage.insert(new Q.Philar({
+        repeatW: 1000,
+        style: 'robust'
+      }));
     }
 
     function _insertObstacleSpawnerOnStage(stage) {
