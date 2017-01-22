@@ -9,9 +9,6 @@ define([
     Q.animations('obstacle', {
       threaten: {
         frames: [0, 1], rate: 1/3
-      },
-      defeated: {
-        frames: [2, 2, 2], trigger: 'disappear',
       }
     });
 
@@ -60,23 +57,6 @@ define([
       },
 
       defeated: function() {
-        if (this.p.defeated) { return; }
-
-        this.set({
-          defeated: true,
-          type: Q.SPRITE_NONE,
-          collisionMask: Q.SPRITE_NONE
-        });
-        this.play('defeated');
-
-        // hack below as unsetting collision doesn't work
-        var self = this;
-        setTimeout(function() {
-          self.destroy();
-        }, 75);
-      },
-
-      disappear: function() {
         this.destroy();
       },
 
