@@ -5,11 +5,11 @@ define([
     Q,
     Obstacle
   ){
-    Obstacle.extend('Hole', {
+    Obstacle.extend('Waterhole', {
       init: function() {
         this._super({
           y: 289,
-          sheet: 'hole',
+          sheet: 'waterhole',
           susceptibilities: [
             'ice'
           ]
@@ -17,5 +17,5 @@ define([
       }
     });
 
-    return Q.Hole;
+    return Q.Waterhole;
 });

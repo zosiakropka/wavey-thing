@@ -31,7 +31,7 @@ define([
       return _([
         'Brambles',
         'Skulls',
-        'Hole'
+        'Waterhole'
       ]).chain()
         .map(function(className) {
           return Q(className).first()
