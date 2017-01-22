@@ -14,8 +14,8 @@ define([
     ];
 
     var BUTTON_POSITIONS = {
-      LEFT_TOP: 'left-top',
-      LEFT_BOTTOM: 'left-bottom',
+      LEFT_1: 'left-1',
+      LEFT_2: 'left-2',
       RIGHT_TOP: 'right-top'
     };
 
@@ -28,10 +28,10 @@ define([
       var $button;
       var shuffled_spell_ids = _(SPELL_IDS).shuffle();
 
-      $button = _get$spellButton(shuffled_spell_ids[0], BUTTON_POSITIONS.LEFT_TOP);
+      $button = _get$spellButton(shuffled_spell_ids[0], BUTTON_POSITIONS.LEFT_1);
       $spellButtons.append($button);
 
-      $button = _get$spellButton(shuffled_spell_ids[1], BUTTON_POSITIONS.LEFT_BOTTOM);
+      $button = _get$spellButton(shuffled_spell_ids[1], BUTTON_POSITIONS.LEFT_2);
       $spellButtons.append($button);
 
       $button = _get$spellButton(shuffled_spell_ids[2], BUTTON_POSITIONS.RIGHT_TOP);

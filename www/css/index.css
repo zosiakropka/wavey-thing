@@ -5,8 +5,8 @@ body, html {
   padding: 0;
 }
 
-.spell-buttons__button--left-top,
-.spell-buttons__button--left-bottom,
+.spell-buttons__button--left-1,
+.spell-buttons__button--left-2,
 .spell-buttons__button--right-top {
   position: fixed;
   z-index: 1000;
@@ -15,33 +15,33 @@ body, html {
   background-size: contain;
   background-position: center;
 }
-.spell-buttons__button--left-top[data-button-id="feist"],
-.spell-buttons__button--left-bottom[data-button-id="feist"],
+.spell-buttons__button--left-1[data-button-id="feist"],
+.spell-buttons__button--left-2[data-button-id="feist"],
 .spell-buttons__button--right-top[data-button-id="feist"] {
   background-image: url(../images/feist.png);
 }
-.spell-buttons__button--left-top[data-button-id="fire"],
-.spell-buttons__button--left-bottom[data-button-id="fire"],
+.spell-buttons__button--left-1[data-button-id="fire"],
+.spell-buttons__button--left-2[data-button-id="fire"],
 .spell-buttons__button--right-top[data-button-id="fire"] {
   background-image: url(../images/fire.png);
 }
-.spell-buttons__button--left-top[data-button-id="ice"],
-.spell-buttons__button--left-bottom[data-button-id="ice"],
+.spell-buttons__button--left-1[data-button-id="ice"],
+.spell-buttons__button--left-2[data-button-id="ice"],
 .spell-buttons__button--right-top[data-button-id="ice"] {
   background-image: url(../images/ice.png);
 }
 
-.spell-buttons__button--left-top {
-  bottom: 40px;
-  left: 60px;
+.spell-buttons__button--left-1 {
+  bottom: 20px;
+  left: 30px;
 }
 
-.spell-buttons__button--left-bottom {
-  bottom: 40px;
-  left: 220px;
+.spell-buttons__button--left-2 {
+  bottom: 20px;
+  left: 170px;
 }
 
 .spell-buttons__button--right-top {
-  bottom: 40px;
-  right: 60px;
+  top: 20px;
+  right: 30px;
 }
