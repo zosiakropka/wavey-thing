@@ -17,6 +17,7 @@ define([
       .enableSound();
 
     Q.load([
+        'intro.png',
         'nekromanta.png',
         'wave-sprite.png',
         'small-wave-sprite.png',
@@ -37,7 +38,10 @@ define([
         'pmme_magic_metal.mp3'
       ],
       function() {
-        console.log('loaded some assets!');
+        Q.sheet('intro', 'intro.png', {
+          tilew: 1920,
+          tileh: 1080
+        });
         Q.sheet('nekromanta', 'nekromanta.png', {
           tilew: 336,
           tileh: 354
