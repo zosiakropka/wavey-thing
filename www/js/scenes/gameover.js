@@ -20,15 +20,12 @@ define([
         x: Q.width / 2
       }));
 
-      stage.insert(new Q.UI.Button({
-        asset: 'points.png',
-        // scale: 2.0,
-        x: 0,
-        y: 0
-      }), scoreContainer);
-
       stage.insert(new Q.UI.Text({
-        label: yourScore + 'pts',
+        label: yourScore + '',
+        color: 'white',
+        shadow: 10,
+        shadowColor: 'black',
+        size: 150,
         x: 0,
         y: -30
       }), scoreContainer);
