@@ -7,14 +7,6 @@ body, html {
   padding: 0;
 }
 
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-  body, html {
-    font-size: 40px;
-  }
-}
-
 .spell-buttons__button--left-1,
 .spell-buttons__button--left-2,
 .spell-buttons__button--right-top {
