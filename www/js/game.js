@@ -23,8 +23,8 @@ define([
         'mini-wave-sprite.png',
         'background-floor.png',
         'background-wall.png',
-        'obstacles/brambles.png',
-        'obstacles/skulls.png',
+        'obstacles/brambles-sprite.png',
+        'obstacles/skulls-sprite.png',
         'obstacles/waterhole-sprite.png',
         'points.png',
         'play-now.png',
@@ -39,11 +39,11 @@ define([
           tilew: 336,
           tileh: 354
         });
-        Q.sheet('brambles', 'obstacles/brambles.png', {
+        Q.sheet('brambles', 'obstacles/brambles-sprite.png', {
           tilew: 300,
           tileh: 400
         });
-        Q.sheet('skulls', 'obstacles/skulls.png', {
+        Q.sheet('skulls', 'obstacles/skulls-sprite.png', {
           tilew: 300,
           tileh: 400
         });

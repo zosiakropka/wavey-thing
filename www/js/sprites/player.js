@@ -23,11 +23,12 @@ define([
           sheet: "nekromanta",  // Setting a sprite sheet sets sprite width and height
           vx: 1000,
           gravity: 0,
-          score: 0
+          score: 0,
+          collisionMask: Q.SPRITE_ENEMY,
+          type: Q.SPRITE_FRIENDLY
         });
 
         this.add('2d, animation');
-
         this.play('surf_right');
       },
 
@@ -36,7 +37,7 @@ define([
         var obstacle = getFirstObstacle();
         if (obstacle && obstacle.isSusceptibile(spell)) {
           this.p.score += 1;
-          obstacle.destroy();
+          obstacle.trigger('defeated');
         }
         function getFirstObstacle() {
           return Q.stage().items.filter(isObstacle)[0];
