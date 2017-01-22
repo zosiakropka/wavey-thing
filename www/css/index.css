@@ -32,16 +32,16 @@ body, html {
 }
 
 .spell-buttons__button--left-top {
-  bottom: calc(50% - 1080px / 2 + 40px);
-  left: calc(50% - 1920px / 2 + 60px);
+  bottom: 40px;
+  left: 60px;
 }
 
 .spell-buttons__button--left-bottom {
-  bottom: calc(50% - 1080px / 2 + 40px);
-  left: calc(50% - 1920px / 2 + 220px);
+  bottom: 40px;
+  left: 220px;
 }
 
 .spell-buttons__button--right-top {
-  bottom: calc(50% - 1080px / 2 + 40px);
-  right: calc(50% - 1920px / 2 + 60px);
+  bottom: 40px;
+  right: 60px;
 }
