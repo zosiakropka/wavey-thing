@@ -1,7 +1,7 @@
 define([
     'require-promise!game',
     'mediator',
-    'scenes/start'
+    'scenes/intro'
   ], function(
     Q,
     mediator
@@ -12,7 +12,7 @@ define([
         Q('Player').first().castSpell(spell);
       });
 
-      Q.stageScene('start');
+      Q.stageScene('intro');
     }
 
     return {
