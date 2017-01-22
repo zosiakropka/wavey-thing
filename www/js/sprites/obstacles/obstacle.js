@@ -9,6 +9,9 @@ define([
     Q.animations('obstacle', {
       threaten: {
         frames: [0, 1], rate: 1/3
+      },
+      harmless: {
+        frames: [2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], rate: 0.2
       }
     });
 
@@ -20,6 +23,7 @@ define([
           sprite: 'obstacle',
           y: 0,
           obstacle: true,
+          maxAge: 4,
           frame: 0,
           scale: 1,
           type: Q.SPRITE_ENEMY,
@@ -40,24 +44,26 @@ define([
       },
 
       step: function(dt) {
+        this.stage.collide(this);
         this.p.age += dt;
 
-        if (this.p.x < -100) { this.destroy(); }
+        if (this.p.age > this.p.maxAge) { this.destroy(); }
       },
 
       hit: function(options) {
         if (Q.stage(1)) { return; }
-        if (this.p.defeated) { return; }
+        if (!this.p.obstacle) { return; }
 
         this.p.type = Q.SPRITE_NONE;
-        this.p.collisionMask = Q.SPRITE_NONE;
 
         this.stage.insert(new WaveSpawner({x: this.p.x}));
         Q.stageScene('gameover', 1);
       },
 
       defeated: function() {
-        this.destroy();
+        this.p.obstacle = false;
+        this.p.type = 0;
+        this.play('harmless');
       },
 
       spawnDeathWave: function() {

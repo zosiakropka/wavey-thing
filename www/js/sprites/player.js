@@ -24,14 +24,24 @@ define([
           sprite: 'player',
           sheet: "nekromanta",  // Setting a sprite sheet sets sprite width and height
           vx: 1000,
-          gravity: 0,
           score: 0,
           collisionMask: Q.SPRITE_ENEMY,
           type: Q.SPRITE_FRIENDLY
         });
 
-        this.add('2d, animation');
+        this.on('hit');
+        this.add('animation');
         this.play('surf_right');
+      },
+
+      step: function(dt) {
+        this.p.x += this.p.vx * dt;
+      },
+
+      hit: function(options) {
+        if (options.obj.p.obstacle) {
+          this.p.vx = 0;
+        }
       },
 
       castSpell: function(spell) {
