@@ -18,14 +18,17 @@ define([
 
     Q.load([
         'nekromanta.png',
-        'przeszkoda_kolce1.png',
-        'przeszkoda_kolce2.png',
-        'fala/fala_calosc2.png',
-        'fala_mala/fala_mala_2.png',
+        'wave-sprite.png',
+        'small-wave-sprite.png',
+        'mini-wave-sprite.png',
         'background-floor.png',
         'background-wall.png',
+        'obstacles/brambles.png',
+        'obstacles/skulls.png',
+        'play-now.png',
         'play-again.png',
         'logo/pmmestudio.jpg',
+        'logo/pinkgreen.png',
         'pmme_magic_metal.mp3'
       ],
       function() {
@@ -34,16 +37,24 @@ define([
           tilew: 309,
           tileh: 354
         });
-        Q.sheet('brambles', 'przeszkoda_kolce1.png', {
-          tilew: 200,
-          tileh: 300
+        Q.sheet('brambles', 'obstacles/brambles.png', {
+          tilew: 300,
+          tileh: 400
         });
-        Q.sheet('wave', 'fala/fala_calosc2.png', {
+        Q.sheet('skulls', 'obstacles/skulls.png', {
+          tilew: 300,
+          tileh: 400
+        });
+        Q.sheet('wave', 'wave-sprite.png', {
           tilew: 5917/6,
           tileh: 1000
         });
-        Q.sheet('small-wave', 'fala_mala/fala_mala_2.png', {
+        Q.sheet('small-wave', 'small-wave-sprite.png', {
           tilew: 700,
+          tileh: 400
+        });
+        Q.sheet('mini-wave', 'mini-wave-sprite.png', {
+          tilew: 400,
           tileh: 400
         });
 

@@ -15,20 +15,20 @@ body, html {
   background-size: contain;
   background-position: center;
 }
-.spell-buttons__button--left-top[data-button-id="kamien"],
-.spell-buttons__button--left-bottom[data-button-id="kamien"],
-.spell-buttons__button--right-top[data-button-id="kamien"] {
-  background-image: url(../images/kamien-icon.png);
+.spell-buttons__button--left-top[data-button-id="feist"],
+.spell-buttons__button--left-bottom[data-button-id="feist"],
+.spell-buttons__button--right-top[data-button-id="feist"] {
+  background-image: url(../images/feist.png);
 }
-.spell-buttons__button--left-top[data-button-id="papier"],
-.spell-buttons__button--left-bottom[data-button-id="papier"],
-.spell-buttons__button--right-top[data-button-id="papier"] {
-  background-image: url(../images/papier-icon.png);
+.spell-buttons__button--left-top[data-button-id="fire"],
+.spell-buttons__button--left-bottom[data-button-id="fire"],
+.spell-buttons__button--right-top[data-button-id="fire"] {
+  background-image: url(../images/fire.png);
 }
-.spell-buttons__button--left-top[data-button-id="nozyce"],
-.spell-buttons__button--left-bottom[data-button-id="nozyce"],
-.spell-buttons__button--right-top[data-button-id="nozyce"] {
-  background-image: url(../images/nozyce-icon.png);
+.spell-buttons__button--left-top[data-button-id="ice"],
+.spell-buttons__button--left-bottom[data-button-id="ice"],
+.spell-buttons__button--right-top[data-button-id="ice"] {
+  background-image: url(../images/ice.png);
 }
 
 .spell-buttons__button--left-top {

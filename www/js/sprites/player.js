@@ -16,14 +16,29 @@ define([
 
         this.add('2d');
 
-        mediator.on('spell:cast', function() {
-          var obstacle = Q('Obstacle').first();
-          if (!obstacle) { return; }
+        mediator.on('spell:cast', function(spell) {
+          var obstacle = _getFirstObstacle();
+          if (!obstacle || !obstacle.isSusceptibile(spell)) {
+            return;
+          }
 
           obstacle.destroy();
         })
       }
     });
+
+    function _getFirstObstacle() {
+      return _([
+        'Brambles',
+        'Skulls'
+      ]).chain()
+        .map(function(className) {
+          return Q(className).first()
+        })
+        .compact()
+        .first()
+        .value();
+    }
 
     return Q.Player;
   });

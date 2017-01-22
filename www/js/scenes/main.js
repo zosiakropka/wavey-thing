@@ -3,6 +3,7 @@ define([
     'sprites/player',
     'sprites/wave',
     'sprites/small-wave',
+    'sprites/mini-wave',
     'game-objects/obstacle-spawner',
     'spells',
     'underscore',
@@ -12,6 +13,7 @@ define([
     Player,
     Wave,
     SmallWave,
+    MiniWave,
     ObstacleSpawner,
     Spells,
     _,
@@ -19,7 +21,7 @@ define([
   ) {
     var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
-    var FLOOR_Y = SCREEN_HEIGHT * 0.8;
+    var FLOOR_Y = SCREEN_HEIGHT - 189;
 
     Q.scene('main', function(stage){
       _insertBackgroundOnStage(stage);
@@ -46,16 +48,18 @@ define([
     }
 
     function _insertPlayerOnStage(stage) {
+      stage.insert(new Wave({age: 0}));
+      stage.insert(new Wave({age: 0.7}));
+      stage.insert(new Wave({age: 1.6}));
       stage.insert(new SmallWave({age: 0}));
+      stage.insert(new MiniWave({x: -250, y: -60, frame: 0, age: 0.2}));
+      stage.insert(new MiniWave({x: -350, y: -20, frame: 2, age: 0.9}));
+      stage.insert(new MiniWave({x: -150, y: -20, frame: 1, age: 0.5}));
 
       var player = stage.insert(new Player({
         x: 10,
         y: -100
       }));
-
-      stage.insert(new Wave({age: 0}));
-      stage.insert(new Wave({age: 0.7}));
-      stage.insert(new Wave({age: 1.6}));
 
       stage.insert(new Q.Repeater({
         asset: 'background-floor.png',
@@ -69,6 +73,7 @@ define([
         .follow(player);
 
       stage.viewport.offsetY = 50;
+      stage.viewport.offsetX = -220;
 
       stage.on('postrender', function() {
         mediator.publish('stage:scene', 'main');

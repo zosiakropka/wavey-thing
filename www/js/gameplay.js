@@ -1,13 +1,13 @@
 define([
     'require-promise!game',
     'mediator',
-    'scenes/main'
+    'scenes/start'
   ], function(
     Q,
     mediator
   ) {
     function startGame() {
-      Q.stageScene("main");
+      Q.stageScene('start');
     }
 
     return {
