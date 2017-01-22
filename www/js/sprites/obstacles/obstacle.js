@@ -62,9 +62,11 @@ define([
       defeated: function() {
         if (this.p.defeated) { return; }
 
-        this.p.defeated = true;
-        this.p.type = Q.SPRITE_NONE;
-        this.p.collisionMask = Q.SPRITE_NONE;
+        this.set({
+          defeated: true,
+          type: Q.SPRITE_NONE,
+          collisionMask: Q.SPRITE_NONE
+        });
         this.play('defeated');
 
         // hack below as unsetting collision doesn't work
