@@ -25,6 +25,7 @@ define([
         'background-wall.png',
         'obstacles/brambles.png',
         'obstacles/skulls.png',
+        'obstacles/hole.png',
         'play-now.png',
         'play-again.png',
         'logo/pmmestudio.jpg',
@@ -44,6 +45,10 @@ define([
         Q.sheet('skulls', 'obstacles/skulls.png', {
           tilew: 300,
           tileh: 400
+        });
+        Q.sheet('hole', 'obstacles/hole.png', {
+          tilew: 500,
+          tileh: 600
         });
         Q.sheet('wave', 'wave-sprite.png', {
           tilew: 5917/6,

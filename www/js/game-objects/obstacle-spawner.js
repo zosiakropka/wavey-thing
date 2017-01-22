@@ -2,16 +2,19 @@ define([
     'require-promise!game',
     'sprites/obstacles/brambles',
     'sprites/obstacles/skulls',
+    'sprites/obstacles/hole',
     'underscore'
   ], function(
     Q,
     Brambles,
     Skulls,
+    Hole,
     _
   ){
     var OBSTACLE_CLASSES = [
       Q.Brambles,
-      Q.Skulls
+      Q.Skulls,
+      Q.Hole
     ];
     Q.GameObject.extend('ObstacleSpawner', {
       init: function() {

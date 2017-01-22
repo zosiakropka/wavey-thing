@@ -30,7 +30,8 @@ define([
     function _getFirstObstacle() {
       return _([
         'Brambles',
-        'Skulls'
+        'Skulls',
+        'Hole'
       ]).chain()
         .map(function(className) {
           return Q(className).first()
