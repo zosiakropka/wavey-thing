@@ -8,9 +8,31 @@ define([
     mediator
   ) {
     Q.scene('gameover', function(stage) {
+      _renderScore(stage);
       _renderPlayAgainOnStage(stage);
       _renderCreditsOnStage(stage);
     });
+
+    function _renderScore(stage) {
+      var yourScore = Q.select('Player', 0).first().p.score;
+      var scoreContainer = stage.insert(new Q.UI.Container({
+        y: 100,
+        x: Q.width / 2
+      }));
+
+      stage.insert(new Q.UI.Button({
+        asset: 'points.png',
+        // scale: 2.0,
+        x: 0,
+        y: 0
+      }), scoreContainer);
+
+      stage.insert(new Q.UI.Text({
+        label: yourScore + 'pts',
+        x: 0,
+        y: -30
+      }), scoreContainer);
+    }
 
     function _renderPlayAgainOnStage(stage) {
       var playAgainContainer = stage.insert(new Q.UI.Container({

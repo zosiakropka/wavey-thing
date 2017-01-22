@@ -11,7 +11,8 @@ define([
         this._super(p, {
           sheet: "nekromanta",  // Setting a sprite sheet sets sprite width and height
           vx: 1000,
-          gravity: 0
+          gravity: 0,
+          score: 0
         });
 
         this.add('2d');
@@ -20,6 +21,7 @@ define([
       castSpell: function(spell) {
         var obstacle = getFirstObstacle();
         if (obstacle && obstacle.isSusceptibile(spell)) {
+          this.p.score += 1;
           obstacle.destroy();
         }
         function getFirstObstacle() {

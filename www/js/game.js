@@ -26,6 +26,7 @@ define([
         'obstacles/brambles.png',
         'obstacles/skulls.png',
         'obstacles/waterhole-sprite.png',
+        'points.png',
         'play-now.png',
         'play-again.png',
         'logo/pmmestudio.jpg',
