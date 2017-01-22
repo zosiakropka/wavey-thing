@@ -11,7 +11,7 @@ define([
         frames: [0, 1], rate: 0.4
       },
       cast_right: {
-        frames: [2], trigger: 'cast', rate: 1/30, next: 'surf_right'
+        frames: [2, 2, 2, 2, 2, 2, 2], trigger: 'cast', rate: 1/30, next: 'surf_right'
       }
     });
 
