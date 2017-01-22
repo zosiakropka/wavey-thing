@@ -14,8 +14,8 @@ define([
     ];
 
     var BUTTON_POSITIONS = {
-      LEFT_1: 'left-1',
-      LEFT_2: 'left-2',
+      LEFT_1: 'left-bottom',
+      LEFT_2: 'left-top',
       RIGHT_TOP: 'right-top'
     };
 
