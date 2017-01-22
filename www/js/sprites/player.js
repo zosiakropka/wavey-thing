@@ -15,31 +15,21 @@ define([
         });
 
         this.add('2d');
+      },
 
-        mediator.on('spell:cast', function(spell) {
-          var obstacle = _getFirstObstacle();
-          if (!obstacle || !obstacle.isSusceptibile(spell)) {
-            return;
-          }
-
+      castSpell: function(spell) {
+        var obstacle = getFirstObstacle();
+        if (obstacle && obstacle.isSusceptibile(spell)) {
           obstacle.destroy();
-        })
+        }
+        function getFirstObstacle() {
+          return Q.stage().items.filter(isObstacle)[0];
+        }
+        function isObstacle(item) {
+          return item && item.p && item.p.obstacle;
+        }
       }
     });
-
-    function _getFirstObstacle() {
-      return _([
-        'Brambles',
-        'Skulls',
-        'Waterhole'
-      ]).chain()
-        .map(function(className) {
-          return Q(className).first()
-        })
-        .compact()
-        .first()
-        .value();
-    }
 
     return Q.Player;
   });

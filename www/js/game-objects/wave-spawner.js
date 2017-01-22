@@ -10,7 +10,7 @@ define([
       init: function(p) {
         this.p = {
           x: p.x,
-          launchDelay: 0.2,
+          launchDelay: 0.1,
           launchRandom: 0.4,
           launch: 0
         }
@@ -21,7 +21,7 @@ define([
 
         if(this.p.launch < 0) {
           this.stage.insert(new Q.Wave({
-            xBase: this.p.x - 1000,
+            xBase: this.p.x - 1200,
             scale: 1.3,
             age: Math.random() * 2,
             maxAge: 6

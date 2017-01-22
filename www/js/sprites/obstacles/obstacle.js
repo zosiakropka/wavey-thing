@@ -12,6 +12,7 @@ define([
         this._super(p, {
           x: player.p.x + Q.width + 50,
           y: 0,
+          obstacle: true,
           frame: 0,
           scale: 1
         });

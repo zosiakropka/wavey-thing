@@ -42,7 +42,7 @@ define([
       var $button = $('<div>');
       $button.addClass('spell-buttons__button--' + buttonPosition);
       $button.attr('data-button-id', spellId);
-      $button.click(function() {
+      $button.on('touchstart, mousedown',function() {
         mediator.publish('spell:cast', spellId)
       });
       return $button;

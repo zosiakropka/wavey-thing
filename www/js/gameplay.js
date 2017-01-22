@@ -7,6 +7,11 @@ define([
     mediator
   ) {
     function startGame() {
+
+      mediator.on('spell:cast', function(spell) {
+        Q('Player').first().castSpell(spell);
+      });
+
       Q.stageScene('start');
     }
 
