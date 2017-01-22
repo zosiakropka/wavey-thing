@@ -62,7 +62,7 @@ define([
           tileh: 600
         });
         Q.sheet('wave', 'wave-sprite.png', {
-          tilew: 5917/6,
+          tilew: 6918/6,
           tileh: 1000
         });
         Q.sheet('small-wave', 'small-wave-sprite.png', {
