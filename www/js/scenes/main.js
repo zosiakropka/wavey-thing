@@ -68,9 +68,9 @@ define([
       stage.insert(new Wave({vx: SPEED, age: 0.7}));
       stage.insert(new Wave({vx: SPEED, age: 1.6}));
       stage.insert(new SmallWave({vx: SPEED, age: 0}));
-      stage.insert(new MiniWave({vx: SPEED, x: -250, y: -30, frame: 0, age: 0.2}));
-      stage.insert(new MiniWave({vx: SPEED, x: -350, y: 10, frame: 2, age: 0.9}));
-      stage.insert(new MiniWave({vx: SPEED, x: -150, y: 10, frame: 1, age: 0.5}));
+      stage.insert(new MiniWave({vx: SPEED, x: -250, y: -60, frame: 0, age: 0.2}));
+      stage.insert(new MiniWave({vx: SPEED, x: -350, y: -20, frame: 2, age: 0.9}));
+      stage.insert(new MiniWave({vx: SPEED, x: -150, y: -20, frame: 1, age: 0.5}));
       var player = stage.insert(new Player({vx: SPEED,  x: 10, y: -100}));
 
       stage.insert(new Q.Repeater({

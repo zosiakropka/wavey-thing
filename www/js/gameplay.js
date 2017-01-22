@@ -1,7 +1,7 @@
 define([
     'require-promise!game',
     'mediator',
-    'scenes/intro'
+    'scenes/start'
   ], function(
     Q,
     mediator
