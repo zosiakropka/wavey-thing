@@ -6,7 +6,7 @@ define([
     'sprites/small-wave',
     'sprites/mini-wave',
     'game-objects/obstacle-spawner',
-    'spells',
+    'scenes/spells',
     'underscore',
     'mediator'
   ], function(
@@ -17,7 +17,7 @@ define([
     SmallWave,
     MiniWave,
     ObstacleSpawner,
-    Spells,
+    SpellsStage,
     _,
     mediator
   ) {
@@ -93,10 +93,6 @@ define([
     }
 
     function _insertSpellButtons() {
-      Spells.renderSpellButtons();
-
-      mediator.subscribe('spell:cast', function() {
-        Spells.renderSpellButtons();
-      });
+      Q.stageScene('spells', 1);
     }
   });

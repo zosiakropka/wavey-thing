@@ -30,7 +30,7 @@ define([
           collisionMask: Q.SPRITE_FRIENDLY
         });
 
-        this.on("hit");
+        this.on('hit');
         this.on('defeated');
         this.on('disappear');
 
@@ -51,11 +51,10 @@ define([
       },
 
       hit: function(options) {
-        if (Q.stage(1)) { return; }
         if (!this.p.obstacle) { return; }
 
+        this.off('hit');
         this.p.type = Q.SPRITE_NONE;
-
         this.stage.insert(new WaveSpawner({x: this.p.x}));
         Q.stageScene('gameover', 1);
       },
