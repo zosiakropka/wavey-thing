@@ -1,9 +1,9 @@
 define([
     'require-promise!game',
-    'mediator'
+    'underscore'
   ], function(
     Q,
-    mediator
+    _
   ){
     Q.UI.Button.extend('SpellButton', {
       init: function(p) {
@@ -11,8 +11,10 @@ define([
           w: 250,
           h: 250
         }), function() {
-          mediator.publish('spell:cast', this.p.effect);
-          this.stage.trigger('spell.cast', this.p.effect);
+          var effect = this.p.effect;
+          _(Q.stages).each(function(stage) {
+            stage.trigger('spell.cast', effect);
+          });
         });
 
         this.fit(150, 150);

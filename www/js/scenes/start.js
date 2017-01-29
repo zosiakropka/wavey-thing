@@ -1,16 +1,11 @@
 define([
     'require-promise!game',
-    'mediator',
     'scenes/main'
   ], function(
-    Q,
-    mediator
+    Q
   ) {
     Q.scene('start', function(stage) {
-      stage.on('postrender', function() {
-        _renderPlayOnStage(stage);
-        mediator.publish('stage:scene', 'start');
-      });
+      _renderPlayOnStage(stage);
     });
 
     function _renderPlayOnStage(stage) {

@@ -7,8 +7,7 @@ define([
     'sprites/mini-wave',
     'game-objects/obstacle-spawner',
     'scenes/spells',
-    'underscore',
-    'mediator'
+    'underscore'
   ], function(
     Q,
     Player,
@@ -18,8 +17,7 @@ define([
     MiniWave,
     ObstacleSpawner,
     SpellsStage,
-    _,
-    mediator
+    _
   ) {
     var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
@@ -87,8 +85,8 @@ define([
       stage.viewport.offsetY = 50;
       stage.viewport.offsetX = -220;
 
-      stage.on('postrender', function() {
-        mediator.publish('stage:scene', 'main');
+      stage.on('spell.cast', function(spell) {
+        player.castSpell(spell);
       });
     }
 
