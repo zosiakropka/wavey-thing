@@ -1,9 +1,7 @@
 define([
-    'require-promise!game',
-    'mediator'
+    'require-promise!game'
   ], function(
-    Q,
-    mediator
+    Q
   ){
     var WAVE_DISTANCE = 650; // average distance between player and wave
     var WAVE_DELTA = 300; // half the amplitude of wave bouncing

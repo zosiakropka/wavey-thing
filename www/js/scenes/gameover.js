@@ -1,11 +1,9 @@
 define([
     'require-promise!game',
-    'sprites/player',
-    'mediator'
+    'sprites/player'
   ], function(
     Q,
-    Player,
-    mediator
+    Player
   ) {
     Q.scene('gameover', function(stage) {
       _renderScore(stage);
@@ -58,9 +56,5 @@ define([
         x: 0,
         y: 0
       }), creditsContainer);
-
-      stage.on('postrender', function() {
-        mediator.publish('stage:scene', 'gameover');
-      });
     }
   });

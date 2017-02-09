@@ -1,16 +1,10 @@
 define([
     'require-promise!game',
-    'mediator',
     'scenes/start'
   ], function(
-    Q,
-    mediator
+    Q
   ) {
     function startGame() {
-
-      mediator.on('spell:cast', function(spell) {
-        Q('Player').first().castSpell(spell);
-      });
 
       Q.stageScene('start');
     }

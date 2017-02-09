@@ -18,6 +18,9 @@ define([
 
     Q.load([
         'nekromanta.png',
+        'fire.png',
+        'fist.png',
+        'ice.png',
         'wave-sprite.png',
         'small-wave-sprite.png',
         'mini-wave-sprite.png',

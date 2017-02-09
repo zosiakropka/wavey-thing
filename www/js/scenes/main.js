@@ -6,9 +6,8 @@ define([
     'sprites/small-wave',
     'sprites/mini-wave',
     'game-objects/obstacle-spawner',
-    'spells',
-    'underscore',
-    'mediator'
+    'scenes/spells',
+    'underscore'
   ], function(
     Q,
     Player,
@@ -17,9 +16,8 @@ define([
     SmallWave,
     MiniWave,
     ObstacleSpawner,
-    Spells,
-    _,
-    mediator
+    SpellsStage,
+    _
   ) {
     var SCREEN_HEIGHT = Q.height;
     var SCREEN_MIDDLE_Y = SCREEN_HEIGHT / 2
@@ -87,16 +85,12 @@ define([
       stage.viewport.offsetY = 50;
       stage.viewport.offsetX = -220;
 
-      stage.on('postrender', function() {
-        mediator.publish('stage:scene', 'main');
+      stage.on('spell.cast', function(spell) {
+        player.castSpell(spell);
       });
     }
 
     function _insertSpellButtons() {
-      Spells.renderSpellButtons();
-
-      mediator.subscribe('spell:cast', function() {
-        Spells.renderSpellButtons();
-      });
+      Q.stageScene('spells', 1);
     }
   });

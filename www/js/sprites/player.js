@@ -1,11 +1,9 @@
 define([
     'require-promise!game',
-    'sprites/spells/spell-effect',
-    'mediator'
+    'sprites/spells/spell-effect'
   ], function(
     Q,
-    SpellEffect,
-    mediator
+    SpellEffect
   ){
 
     Q.animations('player', {
